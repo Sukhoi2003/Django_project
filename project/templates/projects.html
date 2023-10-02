@@ -1,0 +1,11 @@
+{% extends 'main.html' %} {% block content %}
+<h1>This is Templates</h1>
+<h4>Some action</h4>
+<ul>
+    {% for project in data %}
+    <li>
+        <a href="/project/{{project.id}}"> {{project.title}}</a> --> {{project.description}}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock content %}
